@@ -8,11 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
-import org.springframework.web.bind.annotation.CrossOrigin;
-
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from the React app
+@CrossOrigin
 @RequestMapping("/api/seats")
 public class SeatController {
 
@@ -47,9 +45,9 @@ public class SeatController {
             throw new IllegalArgumentException("Event information is required.");
         }
         int eventID = event.getEventID();
-        Event existingEvent = eventService.getEventById(eventID) 
-        .orElseThrow(() -> new RuntimeException("Event not found for ID: " + eventID));
-        if (existingEvent == null) { 
+        Event existingEvent = eventService.getEventById(eventID)
+                .orElseThrow(() -> new RuntimeException("Event not found for ID: " + eventID));
+        if (existingEvent == null) {
             throw new IllegalArgumentException("Event with ID " + eventID + " does not exist.");
         }
         seat.setEvent(existingEvent);
