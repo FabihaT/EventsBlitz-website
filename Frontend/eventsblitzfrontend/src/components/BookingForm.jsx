@@ -133,11 +133,6 @@ const CustomDateInput = ({ value, onClick }) => (
         }
     }
 
-    // Function to redirect to the My Account page
-    const redirectToMyAccount = () => {
-        window.location.href = '/myAccount';
-    };
-
     const renderSeats = () => {
         // Define the maximum number of seats per row
         const maxSeatsPerRow = 6; // Assuming we want 10 seats per row
@@ -305,9 +300,6 @@ const CustomDateInput = ({ value, onClick }) => (
                     </div>
                     <p>Your ticket is ready to view in your account page and email confirmation has also been sent.</p>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={redirectToMyAccount}>Go to My Account</Button>
-                </Modal.Footer>
             </Modal>
         </Container>
     );
