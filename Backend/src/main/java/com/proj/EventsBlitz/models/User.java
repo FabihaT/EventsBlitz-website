@@ -23,8 +23,7 @@ public class User {
 
     }
 
-    public User(String userName, String userAddress, String email, String userType)
-    {
+    public User(String userName, String userAddress, String email, String userType) {
         this.UserName = userName;
         this.UserAddress = userAddress;
         this.Email = email;
@@ -42,6 +41,16 @@ public class User {
 
     public int getUserID() {
         return this.UserID;
+    }
+
+    public void setUserType(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setUserType'");
+    }
+
+    public void setEmail(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setEmail'");
     }
 
     // getters and setters, constructors
